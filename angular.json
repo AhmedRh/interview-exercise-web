@@ -13,9 +13,9 @@
           "strict": true
         }
       },
-      "root": "",
+      "root": "interview-root",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "interview",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -31,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -107,5 +110,7 @@
       }
     }
   },
-  "defaultProject": "interview-app"
+  "cli": {
+    "analytics": false
+  }
 }
